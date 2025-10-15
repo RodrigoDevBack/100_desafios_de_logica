@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>desafio 8</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Enunciado do desafio 8</h1>
+    <h2>Converta um número de segundos para o formato HH:mm:ss.</h2>
+    <form>
+        <label for="capturarSegundos">Digite os segundos</label>
+        <input type="number" id="segundos" oninput="evitarFloatENegativo()">
+        <button type="button" onclick="formatarHorario()">Calcular</button>
+    </form>
+    <br> <br>
+    <h1>Resultado</h1>
+    <p id="resultado"></p>
+
+    <script src='main.js'></script>
+</body>
+</html>
