@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Desafio 14</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <h1>Enunciado do desafio 14</h1>
+    <h2>Substitua todas as ocorrências de uma palavra em um texto por outra.</h2>
+    
+    <form>
+        <label>Digite seu texto</label>
+        <input type="text" id="texto" required>
+        <br>
+        <label>Digite a palavra a ser trocada</label>
+        <input type="text" id="palavra-a-trocar" required>
+        <br>
+        <label>Digite a palvra que vai ficar no lugar</label>
+        <input type="text" id="palavra-no-lugar" required>
+        <br>
+        <button type="button" onclick="trocarPalavras()">Trocar</button>
+    </form>
+
+    <h2>Resultado</h2>
+    <p id="resultado"></p>
+    <script src='main.js'></script>
+</body>
+</html>
