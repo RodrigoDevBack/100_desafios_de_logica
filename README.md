@@ -6,7 +6,7 @@
 
 O projeto consiste na resolução de 100 desafios de lógica.
 
-Os enunciados dos 100 desafios podem ser encrontrados em [docs/desafios.pdf](https://github.com/RodrigoDevBack/100_desafios_de_logica/tree/main/docs/desafios.pdf)
+Os enunciados dos 100 desafios podem ser encrontrados em <a href="https://github.com/RodrigoDevBack/100_desafios_de_logica/tree/main/docs/desafios.pdf" target="_blank"> docs/desafios.pdf </a>.
 
 ---
 
@@ -73,8 +73,8 @@ Os enunciados dos 100 desafios podem ser encrontrados em [docs/desafios.pdf](htt
 
 ### Rodrigo Moraes
 
-### LinkedIn: [click here](https://www.linkedin.com/in/rodrigo-moraes-7a65232b7/)
+### LinkedIn: <a href="https://www.linkedin.com/in/rodrigo-moraes-7a65232b7/" target="_blank"> click here </a>
 
-### GitHub: [click here](https://github.com/RodrigoDevBack)
+### GitHub: <a href="https://github.com/RodrigoDevBack" target="_blank"> click here </a>
 
 ---
