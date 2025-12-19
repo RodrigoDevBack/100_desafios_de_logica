@@ -1,9 +1,9 @@
-export interface Calculo_Media_De_Tres_Numeros_Input {
+export interface AverageOfThreeNumbersInput {
     firstValue: number
     secondValue: number
     thirdValue: number
 }
 
-export interface Calculo_Media_De_Tres_Numeros_Output {
-    result: number
+export interface verifyEvenOddInput {
+    value: number
 }

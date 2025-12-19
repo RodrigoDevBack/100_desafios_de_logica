@@ -10,26 +10,26 @@
     <h1>Enunciado do desafio 2</h1>
     <h2>Verifique se um número é par ou ímpar.</h2>
 
-    <form>
-      <label for="verificar_par">Digite o valor a verificar</label>
+    <form id="form">
+      <label for="form">Digite o valor a verificar</label>
       <input
-        id="input_valor"
+        id="value"
         type="number"
         step="1"
         min="0"
-        oninput="evitarFloat(event)"
+        oninput="avoidFloat(event)"
         required
       />
       <br />
       <br />
-      <button onclick="verificarParImpar()" type="button">Verificar</button>
+      <button onclick="checkEvenOdd()" type="submit">Verificar</button>
     </form>
     <br />
 
     <h2>Resultado</h2>
 
-    <p id="resultado">--+--</p>
-    
+    <p id="viewResult">--+--</p>
+
     <a href="../../index.html">Voltar</a>
     <script src="main.js"></script>
   </body>

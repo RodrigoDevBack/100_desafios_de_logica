@@ -1,19 +1,38 @@
 import type { Response, Request } from "express";
 import type {
-  Calculo_Media_De_Tres_Numeros_Input
+  AverageOfThreeNumbersInput,
+  verifyEvenOddInput,
 } from "../../interfaces/desafios_01_10.ts";
 
 export default class Manipulacao_de_Numeros_Service {
-  static calculo_media_de_tres_numeros(
-    req: Request<{}, any, Calculo_Media_De_Tres_Numeros_Input>,
+  static averageOfThreeNumbers(
+    req: Request<{}, any, AverageOfThreeNumbersInput>,
     res: Response
   ) {
     try {
-      const calc = (req.body.firstValue + req.body.secondValue + req.body.thirdValue) / 3;
+      const calc =
+        (req.body.firstValue + req.body.secondValue + req.body.thirdValue) / 3;
 
-      return res.status(200).json({"result": calc});
+      return res.status(200).json({ result: calc });
     } catch (error) {
       throw res.status(400).json("Falha inesperada:" + error);
+    }
+  }
+
+  static verifyEvenOdd(
+    req: Request<{}, any, verifyEvenOddInput>,
+    res: Response
+  ) {
+    try {
+      const calc: boolean = req.body.value % 2 === 0 ? true : false;
+
+      const result: string = calc
+        ? `O valor ${req.body.value} é PAR`
+        : `O valor ${req.body.value} é Ímpar`;
+
+      return res.status(200).json({ result: result });
+    } catch (error) {
+      throw res.status(400).json("Falha inesperada: " + error);
     }
   }
 }

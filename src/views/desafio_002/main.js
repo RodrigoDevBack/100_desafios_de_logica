@@ -1,21 +1,36 @@
-const resultado = document.getElementById('resultado')
+function avoidFloat(evento) {
+  const input = evento.target;
+  const value = input.value;
 
-function evitarFloat(evento) {
-    const entrada = evento.target
-    const valor = entrada.value
-
-    if (!Number.isInteger(Number(valor))) {
-        entrada.value = parseInt(valor)
-    }
+  if (!Number.isInteger(Number(value))) {
+    input.value = parseInt(value);
+  }
 }
 
-function verificarParImpar() {
-    let input_valor = document.getElementById('input_valor').value
-    
-    if (parseInt(input_valor) % 2 == 0) {
-        resultado.textContent = `O valor ${input_valor} é PAR`
-        return NaN
-    }
-    resultado.textContent = `O valor ${input_valor} é ÍMPAR`
-    return  NaN
+const form = document.getElementById("form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  await checkEvenOdd();
+});
+
+async function checkEvenOdd() {
+  const viewResult = document.getElementById("viewResult");
+  const value = document.getElementById("value").value;
+
+  const body = {
+    value: parseInt(value),
+  };
+
+  const request = await fetch("http://localhost:3040/desafios_01_10/002/", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(body),
+  });
+
+  const response = await request.json();
+
+  viewResult.textContent = response.result;
 }

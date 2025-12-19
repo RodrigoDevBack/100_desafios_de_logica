@@ -3,7 +3,6 @@ import express from "express";
 
 export const router_01_10 = express.Router();
 
-router_01_10.post(
-  "/001",
-  Manipulacao_de_Numeros_Service.calculo_media_de_tres_numeros
-);
+router_01_10.post("/001", Manipulacao_de_Numeros_Service.averageOfThreeNumbers);
+
+router_01_10.post("/002", Manipulacao_de_Numeros_Service.verifyEvenOdd);
