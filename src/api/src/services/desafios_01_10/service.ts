@@ -9,7 +9,7 @@ export default class Manipulacao_de_Numeros_Service {
     res: Response
   ) {
     try {
-      const calc = (req.body.numero1 + req.body.numero2 + req.body.numero3) / 3;
+      const calc = (req.body.firstValue + req.body.secondValue + req.body.thirdValue) / 3;
 
       return res.status(200).json({"result": calc});
     } catch (error) {

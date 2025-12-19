@@ -1,15 +1,15 @@
-const test = document.getElementById("test");
-test.addEventListener("submit", async (e) => {
+const form = document.getElementById("form");
+form.addEventListener("submit", async (e) => {
   e.preventDefault();
-  const tela_resultado = document.getElementById("resultado");
-  const primeiro_valor = document.getElementById("primeiro_valor").value;
-  const segundo_valor = document.getElementById("segundo_valor").value;
-  const terceiro_valor = document.getElementById("terceiro_valor").value;
+  const viewResult = document.getElementById("viewResult");
+  const firstValue = document.getElementById("firstValue").value;
+  const secondValue = document.getElementById("secondValue").value;
+  const thirdvalue = document.getElementById("thirdvalue").value;
 
   const body = {
-    "numero1": parseInt(primeiro_valor),
-    "numero2": parseInt(segundo_valor),
-    "numero3": parseInt(terceiro_valor),
+    firstValue: parseInt(firstValue),
+    secondValue: parseInt(secondValue),
+    thirdValue: parseInt(thirdvalue),
   };
 
   const request = await fetch("http://localhost:3040/desafios_01_10/001/", {
@@ -19,9 +19,9 @@ test.addEventListener("submit", async (e) => {
     },
     body: JSON.stringify(body),
   });
-  
+
   const response = await request.json();
-  tela_resultado.textContent = response.result.toFixed(2);
+  viewResult.textContent = response.result.toFixed(2);
 });
 async function calcularMedia(e) {
   e.preventDefault();

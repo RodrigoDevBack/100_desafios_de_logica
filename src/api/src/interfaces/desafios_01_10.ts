@@ -1,7 +1,7 @@
 export interface Calculo_Media_De_Tres_Numeros_Input {
-    numero1: number
-    numero2: number
-    numero3: number
+    firstValue: number
+    secondValue: number
+    thirdValue: number
 }
 
 export interface Calculo_Media_De_Tres_Numeros_Output {
