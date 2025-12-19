@@ -1,0 +1,34 @@
+{
+  "name": "api",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Centro de implementação do backend dos desafios",
+  "main": "app.ts",
+  "scripts": {
+    "app": "node src/app.ts",
+    "dev": "nodemon src/app.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RodrigoDevBack/100_desafios_de_logica.git"
+  },
+  "author": "RodrigoDevBack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/RodrigoDevBack/100_desafios_de_logica/issues"
+  },
+  "homepage": "https://github.com/RodrigoDevBack/100_desafios_de_logica#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.1",
+    "typescript": "^5.9.3",
+    "nodemon": "^3.1.11",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.6"
+  }
+}

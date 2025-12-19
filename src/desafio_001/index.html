@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Desafio 1</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-</head>
-<body>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
     <h1>Enunciado do desafio 1</h1>
     <h2>Calcule a média de três números fornecidos pelo usuário.</h2>
-    
-    <form>
-        <label for="media">Primeiro valor</label>
-        <input id="primeiro_valor" type="number" placeholder="Ex: 3.14" required>
-        <br> <br>
-        <label for="media">Segundo valor</label>
-        <input id="segundo_valor" type="number" placeholder="Ex: 3.14" required>
-        <br> <br>
-        <label for="media">Terceiro valor</label>
-        <input id="terceiro_valor" type="number" placeholder="Ex: 3.14" required>
-        <br> <br>
-        <button onclick="calcularMedia()" type="button">Calcular</button>
+
+    <form id="test" method="post" >
+      <label for="media">Primeiro valor</label>
+      <input
+        id="primeiro_valor"
+        type="number"
+        placeholder="Ex: 3.14"
+        required
+      />
+      <br />
+      <br />
+      <label for="media">Segundo valor</label>
+      <input id="segundo_valor" type="number" placeholder="Ex: 3.14" required />
+      <br />
+      <br />
+      <label for="media">Terceiro valor</label>
+      <input
+        id="terceiro_valor"
+        type="number"
+        placeholder="Ex: 3.14"
+        required
+      />
+      <br />
+      <br />
+      <button type="submit">Calcular</button>
     </form>
-    <br>
-    
+    <br />
+
     <h2>Resultado</h2>
-    
+
     <p id="resultado">--+--</p>
-    
-    <script src='main.js'></script>
-</body>
+
+    <script src="main.js"></script>
+  </body>
 </html>

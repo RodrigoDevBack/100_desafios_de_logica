@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Initial page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <style>
+      ul {
+        list-style: none;
+        padding-left: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bem vindo!!</h1>
+    <br />
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <h2>Escolha o desafio que você gostaria de testar</h2>
+        <br />
+        <thead>
+          <tr>
+            <th id="manipulação-de-numeros">Manipulação de Números</th>
+            <th id="manipulacao-de-strings">Manip. de Strings</th>
+            <th id="estruturas-de-controle">Estruturas de Controle</th>
+            <th id="manipulacao-de-arrays">Manip. de Arrays</th>
+            <th id="objetos-e-manipulacao-de-dados">
+              Objetos e Manipulação de Dados
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="challenges-list">
+            <td><ul id="010"></ul></td>
+            <td><ul id="020"></ul></td>
+            <td><ul id="030"></ul></td>
+            <td><ul id="040"></ul></td>
+            <td><ul id="050"></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th id="funcoes-e-modularidade">Funções e Modularidade</th>
+            <th id="simulacoes-e-cenarios-do-mundo-real">
+              Simulações e Cenários do Mundo Real
+            </th>
+            <th id="desafios-com-algoritmos">Algoritmos</th>
+            <th id="projetos-basicos">Projetos Básicos</th>
+            <th id="desafios-de-raciocinio">Raciocínio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="align-bottom">
+            <td><ul id="060"></ul></td>
+            <td><ul id="070"></ul></td>
+            <td><ul id="080"></ul></td>
+            <td><ul id="090"></ul></td>
+            <td><ul id="100"></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      const dezenas_index = [
+        "010",
+        "020",
+        "030",
+        "040",
+        "050",
+        "060",
+        "070",
+        "080",
+        "090",
+        "100",
+      ];
+      let coluna = dezenas_index[0];
+
+      for (let i = 1; i <= 100; i++) {
+        let challenge_number = i != 100 ? (i < 10 ? `00${i}` : `0${i}`) : "100";
+
+        let ul_element = document.getElementById(coluna);
+
+        let new_li_element = document.createElement("li");
+
+        let path = `desafio_${challenge_number}/index.html`;
+
+        new_li_element.innerHTML = `<a href="${path}"> Desafio ${challenge_number}</a> <br> <br>`;
+
+        ul_element.appendChild(new_li_element);
+
+        coluna =
+          i / 10 in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+            ? dezenas_index[i / 10]
+            : coluna;
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
