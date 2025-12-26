@@ -7,3 +7,7 @@ export interface AverageOfThreeNumbersInput {
 export interface verifyEvenOddInput {
     value: number
 }
+
+export interface convertScaleInput {
+    value: number
+}

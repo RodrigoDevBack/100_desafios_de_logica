@@ -1,6 +1,7 @@
 import type { Response, Request } from "express";
 import type {
   AverageOfThreeNumbersInput,
+  convertScaleInput,
   verifyEvenOddInput,
 } from "../../interfaces/desafios_01_10.ts";
 
@@ -31,6 +32,16 @@ export default class Manipulacao_de_Numeros_Service {
         : `O valor ${req.body.value} é Ímpar`;
 
       return res.status(200).json({ result: result });
+    } catch (error) {
+      throw res.status(400).json("Falha inesperada: " + error);
+    }
+  }
+
+  static convertScale(req: Request<{}, any, convertScaleInput>, res: Response) {
+    try {
+      const calcResponse: number = req.body.value * 1.8 + 32;
+
+      return res.status(200).json({ result: calcResponse });
     } catch (error) {
       throw res.status(400).json("Falha inesperada: " + error);
     }
