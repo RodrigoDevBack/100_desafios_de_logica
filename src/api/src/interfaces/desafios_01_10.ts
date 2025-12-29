@@ -11,3 +11,7 @@ export interface verifyEvenOddInput {
 export interface convertScaleInput {
     value: number
 }
+
+export interface checkFirstInput {
+    value: number
+}

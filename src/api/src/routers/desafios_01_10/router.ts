@@ -8,3 +8,5 @@ router_01_10.post("/001", Manipulacao_de_Numeros_Service.averageOfThreeNumbers);
 router_01_10.post("/002", Manipulacao_de_Numeros_Service.verifyEvenOdd);
 
 router_01_10.post("/003", Manipulacao_de_Numeros_Service.convertScale);
+
+router_01_10.post("/004", Manipulacao_de_Numeros_Service.checkFirst);

@@ -1,6 +1,7 @@
 import type { Response, Request } from "express";
 import type {
   AverageOfThreeNumbersInput,
+  checkFirstInput,
   convertScaleInput,
   verifyEvenOddInput,
 } from "../../interfaces/desafios_01_10.ts";
@@ -42,6 +43,28 @@ export default class Manipulacao_de_Numeros_Service {
       const calcResponse: number = req.body.value * 1.8 + 32;
 
       return res.status(200).json({ result: calcResponse });
+    } catch (error) {
+      throw res.status(400).json("Falha inesperada: " + error);
+    }
+  }
+
+  static checkFirst(req: Request<{}, any, checkFirstInput>, res: Response) {
+    try {
+      const dividend: number = req.body.value;
+      let totDivisors: number = 0;
+
+      for (let i = 0; i <= dividend; i++) {
+        if (dividend % i == 0) {
+          totDivisors = totDivisors + 1;
+        }
+      }
+
+      const response: string =
+        totDivisors == 2
+          ? `O valor ${dividend} é PRIMO`
+          : `O valor ${dividend} NÃO é PRIMO`;
+
+      res.status(200).json({ result: response });
     } catch (error) {
       throw res.status(400).json("Falha inesperada: " + error);
     }
